@@ -25,3 +25,14 @@ function listaLetrehoz(){
     console.log(LISTA)
     return LISTA
 }
+
+
+function felkapcsol(){
+    
+}
+
+
+function esemenyLetrehoz(LISTA){
+    const LEKAPCSOLMEGFOG = $(".lekapcsolt")
+    
+}
