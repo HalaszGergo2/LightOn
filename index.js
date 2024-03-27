@@ -1,5 +1,6 @@
 $(document).ready( function() {
     $("main").html(htmlLetrehoz(listaLetrehoz()))
+    esemenyLetrehoz();
 });
 
 function htmlLetrehoz(LISTA){
@@ -32,10 +33,11 @@ function listaLetrehoz(){
 }
 
 
-function lekapcsol(){
+function lekapcsol(LISTA){
     const FELKAPCSOLMEGFOG = $(".felkapcsolt")
     FELKAPCSOLMEGFOG.on("click", function(){
-        console.log("hello")
+        console.log("lekapcsolo")
+
         
     })
 }
@@ -43,16 +45,20 @@ function lekapcsol(){
 
 
 function felkapcsol(){
-
+    const LEKAPCSOLMEGFOG = $(".lekapcsolt")
+    LEKAPCSOLMEGFOG.on("click", function(){
+        
+        console.log("felkapcsolo")
+        LEKAPCSOLMEGFOG.empty()
+        LEKAPCSOLMEGFOG.html("1")
+        
+    })
 }
 
 
 
 
 function esemenyLetrehoz(LISTA){
-    
-    
-    
     felkapcsol()
     lekapcsol()
     
