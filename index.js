@@ -1,14 +1,19 @@
-$("load", function () {
-    $("body").html(htmlLetrehoz())
-    
+$(document).ready( function() {
+    $("main").html(htmlLetrehoz(listaLetrehoz()))
 });
 
 function htmlLetrehoz(LISTA){
-    listaLetrehoz()
+    
     let txt = `<h1>Light On játék</h1>
     <div class='gombok'>`
     for (let index = 0; index < LISTA.length; index++) {
-        txt += `<div class='gomb'></div>`
+        
+        if(LISTA[index] === 0){
+            txt += `<div class='lekapcsolt'>${LISTA[index]}</div>`
+        }
+        if(LISTA[index] === 1){
+            txt += `<div class='felkapcsolt'>${LISTA[index]}</div>`
+        }
     }
     txt += `</div>`
     return txt
