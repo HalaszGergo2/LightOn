@@ -1,0 +1,20 @@
+.gombok{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.lekapcsolt{
+    border: 2px solid black;
+    border-radius: 60px;
+    width: 10%;
+    background-color: orange;
+    color: orange;
+    padding: 50px;
+}
+.felkapcsolt{
+    border: 2px solid black;
+    border-radius: 60px;
+    width: 10%;
+    background-color: green;
+    color: green;
+    padding: 50px;
+}
