@@ -30,7 +30,6 @@ function listaLetrehoz(){
     console.log(LISTA)
     return LISTA
 }
-<<<<<<< HEAD
 
 
 function felkapcsol(){
@@ -42,5 +41,3 @@ function esemenyLetrehoz(LISTA){
     const LEKAPCSOLMEGFOG = $(".lekapcsolt")
     
 }
-=======
->>>>>>> e060d76f4c082a0ef552da6b8f8ef883fc8ba46e
