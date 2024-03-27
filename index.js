@@ -32,12 +32,28 @@ function listaLetrehoz(){
 }
 
 
-function felkapcsol(){
-    
+function lekapcsol(){
+    const FELKAPCSOLMEGFOG = $(".felkapcsolt")
+    FELKAPCSOLMEGFOG.on("click", function(){
+        console.log("hello")
+        
+    })
 }
 
 
+
+function felkapcsol(){
+
+}
+
+
+
+
 function esemenyLetrehoz(LISTA){
-    const LEKAPCSOLMEGFOG = $(".lekapcsolt")
+    
+    
+    
+    felkapcsol()
+    lekapcsol()
     
 }
