@@ -32,25 +32,32 @@ function listaLetrehoz(){
 }
 
 
-function lekapcsol(LISTA){
+function lekapcsol(){
+    const FELKAPCSLISTA = []
     const FELKAPCSOLMEGFOG = $(".felkapcsolt")
     FELKAPCSOLMEGFOG.on("click", function(event){
-        console.log("hello")
+        
         let id = event.target.id
+        FELKAPCSLISTA.push(id)
         console.log(id)
-        FELKAPCSOLMEGFOG.addClass(".lekapcsolt")
+        console.log(FELKAPCSLISTA)
     })
+    return FELKAPCSLISTA
 }
 
 
 
 function felkapcsol(){
     const LEKAPCSOLMEGFOG = $(".lekapcsolt")
-    LEKAPCSOLMEGFOG.on("click", function(){
+    const LEKAPCSLISTA = []
+    LEKAPCSOLMEGFOG.on("click", function(event){
         
-        console.log("felkapcsolo")
-        LEKAPCSOLMEGFOG.empty()
-        LEKAPCSOLMEGFOG.html("1")
+        let id = event.target.id
+        LEKAPCSLISTA.push(id)
+        const LISTAELEM = LEKAPCSLISTA[index]
+        LISTAELEM.addClass(".felkapcsolt")
+        console.log(id)
+        console.log(LEKAPCSLISTA)
         
     })
 }
