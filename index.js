@@ -15,6 +15,7 @@ function htmlLetrehoz(LISTA){
         if(LISTA[index] === 1){
             txt += `<div class='felkapcsolt'  id='${index}'>${LISTA[index]}</div>`
         }
+        
     }
     txt += `</div>`
     return txt
@@ -33,33 +34,28 @@ function listaLetrehoz(){
 
 
 function lekapcsol(){
-    const FELKAPCSLISTA = []
+
     const FELKAPCSOLMEGFOG = $(".felkapcsolt")
     FELKAPCSOLMEGFOG.on("click", function(event){
         
         let id = event.target.id
-        FELKAPCSLISTA.push(id)
+
         console.log(id)
-        console.log(FELKAPCSLISTA)
     })
-    return FELKAPCSLISTA
 }
 
 
 
-function felkapcsol(){
+function felkapcsol(LISTA){
     const LEKAPCSOLMEGFOG = $(".lekapcsolt")
-    const LEKAPCSLISTA = []
     LEKAPCSOLMEGFOG.on("click", function(event){
         
         let id = event.target.id
-        LEKAPCSLISTA.push(id)
-        const LISTAELEM = LEKAPCSLISTA[index]
-        LISTAELEM.addClass(".felkapcsolt")
-        console.log(id)
-        console.log(LEKAPCSLISTA)
-        
+        if(LISTA[index] === 0){
+            LISTA[index] === 1
+        }
     })
+    
 }
 
 
