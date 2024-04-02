@@ -15,6 +15,7 @@ function htmlLetrehoz(LISTA){
         if(LISTA[index] === 1){
             txt += `<div class='felkapcsolt'  id='${index}'>${LISTA[index]}</div>`
         }
+        
     }
     txt += `</div>`
     return txt
@@ -42,16 +43,13 @@ function lekapcsol(LISTA){
             FELKAPCSOLMEGFOG[id] === '0';
         }
         console.log(id)
-        console.log(FELKAPCSLISTA)
     })
-    return FELKAPCSLISTA
 }
 
 
 
 function felkapcsol(LISTA){
     const LEKAPCSOLMEGFOG = $(".lekapcsolt")
-    const LEKAPCSLISTA = []
     LEKAPCSOLMEGFOG.on("click", function(event){
         let id = event.target.id
         if(LEKAPCSOLMEGFOG[id] === '0'){
