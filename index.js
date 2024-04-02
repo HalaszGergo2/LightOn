@@ -32,13 +32,15 @@ function listaLetrehoz(){
 }
 
 
-function lekapcsol(){
+function lekapcsol(LISTA){
     const FELKAPCSLISTA = []
     const FELKAPCSOLMEGFOG = $(".felkapcsolt")
     FELKAPCSOLMEGFOG.on("click", function(event){
         
         let id = event.target.id
-        FELKAPCSLISTA.push(id)
+        if(FELKAPCSOLMEGFOG[id] === '1'){
+            FELKAPCSOLMEGFOG[id] === '0';
+        }
         console.log(id)
         console.log(FELKAPCSLISTA)
     })
@@ -47,19 +49,19 @@ function lekapcsol(){
 
 
 
-function felkapcsol(){
+function felkapcsol(LISTA){
     const LEKAPCSOLMEGFOG = $(".lekapcsolt")
     const LEKAPCSLISTA = []
     LEKAPCSOLMEGFOG.on("click", function(event){
-        
         let id = event.target.id
-        LEKAPCSLISTA.push(id)
-        const LISTAELEM = LEKAPCSLISTA[index]
-        LISTAELEM.addClass(".felkapcsolt")
+        if(LEKAPCSOLMEGFOG[id] === '0'){
+            LEKAPCSOLMEGFOG[id] === '1';
+        }
+
         console.log(id)
         console.log(LEKAPCSLISTA)
-        
     })
+
 }
 
 
