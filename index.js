@@ -1,6 +1,7 @@
 $(document).ready( function() {
-    $("main").html(htmlLetrehoz(listaLetrehoz()))
-    esemenyLetrehoz()
+    const LISTA=listaLetrehoz()
+    $("main").html(htmlLetrehoz(LISTA))
+    leFelKapcsol(LISTA)
 });
 
 function htmlLetrehoz(LISTA){
@@ -13,7 +14,7 @@ function htmlLetrehoz(LISTA){
             txt += `<div class='lekapcsolt' id='${index}'>${LISTA[index]}</div>`
         }
         if(LISTA[index] === 1){
-            txt += `<div class='felkapcsolt'  id='${index}'>${LISTA[index]}</div>`
+            txt += `<div  class='felkapcsolt' id='${index}'>${LISTA[index]}</div>`
         }
         
     }
@@ -33,40 +34,29 @@ function listaLetrehoz(){
 }
 
 
-function lekapcsol(LISTA){
-    const FELKAPCSLISTA = []
-    const FELKAPCSOLMEGFOG = $(".felkapcsolt")
-    FELKAPCSOLMEGFOG.on("click", function(event){
+
+
+function leFelKapcsol(LISTA){
+    const ELEM = $(".gombok")
+    console.log(LISTA)
+    ELEM.on("click", function(event){
+        let id = event.target.id
+        console.log(LISTA[id])
+        if(LISTA[id] === 0){
+            LISTA[id] = 1;
+        }else{
+            LISTA[id] = 0
+        }
         
-        let id = event.target.id
-        if(FELKAPCSOLMEGFOG[id] === '1'){
-            FELKAPCSOLMEGFOG[id] === '0';
-        }
-        console.log(id)
-    })
-}
-
-
-
-function felkapcsol(LISTA){
-    const LEKAPCSOLMEGFOG = $(".lekapcsolt")
-    LEKAPCSOLMEGFOG.on("click", function(event){
-        let id = event.target.id
-        if(LEKAPCSOLMEGFOG[id] === '0'){
-            LEKAPCSOLMEGFOG[id] === '1';
-        }
 
         console.log(id)
-        console.log(LEKAPCSLISTA)
+        $("main").html(htmlLetrehoz(LISTA))
+        leFelKapcsol(LISTA)
     })
-
-}
-
-
-
-
-function esemenyLetrehoz(LISTA){
-    felkapcsol()
-    lekapcsol()
     
+
 }
+
+
+
+
