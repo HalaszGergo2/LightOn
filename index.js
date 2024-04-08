@@ -53,6 +53,7 @@ export function leFelKapcsol(LISTA){
         console.log(id)
         $("main").html(htmlLetrehoz(LISTA))
         leFelKapcsol(LISTA)
+        osszLekapcsolt(LISTA)
     })
     
 
@@ -69,7 +70,7 @@ export function osszLekapcsolt(LISTA){
       }
       
       if (lekapcsoltak === LISTA.length) {
-        console.log("Hurrá, meghosszabítottad a Föld életét!")
+        window.alert("Hurrá, meghosszabítottad a Föld életét!")
       } 
       
       
