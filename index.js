@@ -3,6 +3,7 @@ $(document).ready( function() {
     $("main").html(htmlLetrehoz(LISTA))
     leFelKapcsol(LISTA);
     osszLekapcsolt(LISTA);
+    ujJatek()
 });
 
 export function htmlLetrehoz(LISTA){
@@ -77,6 +78,16 @@ export function osszLekapcsolt(LISTA){
         const LEKAPCSOLTAKSZAMA = $("#lekapcsoltakSzama")
         LEKAPCSOLTAKSZAMA.html(lekapcsoltak)
 
+}
+
+export function ujJatek(LISTA){
+    const GOMBMEGFOG = $("button")
+    GOMBMEGFOG.on("click", function(){
+        const LISTA = htmlLetrehoz();
+        listaLetrehoz();
+        leFelKapcsol(LISTA);
+        console.log("kutya")
+    })
 }
 
 
