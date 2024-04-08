@@ -1,25 +1,33 @@
-.gombok{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
+
 .lekapcsolt{
     border: 2px solid black;
-    border-radius: 60px;
-    width: 10%;
+    border-radius: 100px;
+    width: 8%;
     background-color: orange;
     color: orange;
-    padding: 50px;
+    padding: 20px;
+    height: 20px;
+    margin: auto;
 }
 .felkapcsolt{
     border: 2px solid black;
-    border-radius: 60px;
-    width: 10%;
+    border-radius: 100px;
+    width: 8%;
     background-color: green;
     color: green;
-    padding: 50px;
-}
-body{
+    padding: 20px;
+    height: 20px;
     margin: auto;
-    text-align: center;
 }
 
+main{
+    margin: auto;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+.gombok{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  
+}

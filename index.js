@@ -8,7 +8,8 @@ $(document).ready( function() {
 
 export function htmlLetrehoz(LISTA){
     
-    let txt = `<h1>Light On játék</h1>
+    let txt = `
+    <h1>Light On játék</h1>
     <div class='gombok'>`
     for (let index = 0; index < LISTA.length; index++) {
         
@@ -20,7 +21,14 @@ export function htmlLetrehoz(LISTA){
         }
         
     }
+    
     txt += `</div>`
+    txt += `<div>
+        <p>Kapcsold le az összes lámpát! (Mind legyen sárga) </p>
+        <p>Lekapcsolt lámpák száma:</p>
+        <b id="lekapcsoltakSzama"></b>
+        <button> Új Játék </button>
+    </div>`
     return txt
 }
 
@@ -77,6 +85,7 @@ export function osszLekapcsolt(LISTA){
       
         const LEKAPCSOLTAKSZAMA = $("#lekapcsoltakSzama")
         LEKAPCSOLTAKSZAMA.html(lekapcsoltak)
+        ujJatek()
 
 }
 
@@ -87,6 +96,7 @@ export function ujJatek(LISTA){
         $("main").html(htmlLetrehoz(LISTA))
         leFelKapcsol(LISTA)
         osszLekapcsolt(LISTA)
+        ujJatek(LISTA)
     })
 }
 
