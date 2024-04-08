@@ -73,7 +73,7 @@ export function osszLekapcsolt(LISTA){
       } 
       
       
-        const LEKAPCSOLTAKSZAMA = $("#szam")
+        const LEKAPCSOLTAKSZAMA = $("#lekapcsoltakSzama")
         LEKAPCSOLTAKSZAMA.html(lekapcsoltak)
 
 }
