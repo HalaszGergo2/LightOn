@@ -83,10 +83,10 @@ export function osszLekapcsolt(LISTA){
 export function ujJatek(LISTA){
     const GOMBMEGFOG = $("button")
     GOMBMEGFOG.on("click", function(){
-        const LISTA = htmlLetrehoz();
-        listaLetrehoz();
-        leFelKapcsol(LISTA);
-        console.log("kutya")
+        const LISTA=listaLetrehoz()
+        $("main").html(htmlLetrehoz(LISTA))
+        leFelKapcsol(LISTA)
+        osszLekapcsolt(LISTA)
     })
 }
 
