@@ -1,10 +1,11 @@
 $(document).ready( function() {
     const LISTA=listaLetrehoz()
     $("main").html(htmlLetrehoz(LISTA))
-    leFelKapcsol(LISTA)
+    leFelKapcsol(LISTA);
+    osszLekapcsolt(LISTA);
 });
 
-function htmlLetrehoz(LISTA){
+export function htmlLetrehoz(LISTA){
     
     let txt = `<h1>Light On játék</h1>
     <div class='gombok'>`
@@ -22,7 +23,7 @@ function htmlLetrehoz(LISTA){
     return txt
 }
 
-function listaLetrehoz(){
+export function listaLetrehoz(){
     const LISTA = []
     
     for (let index = 0; index < 9; index++) {
@@ -36,7 +37,7 @@ function listaLetrehoz(){
 
 
 
-function leFelKapcsol(LISTA){
+export function leFelKapcsol(LISTA){
     const ELEM = $(".gombok")
     console.log(LISTA)
     ELEM.on("click", function(event){
@@ -57,6 +58,24 @@ function leFelKapcsol(LISTA){
 
 }
 
+export function osszLekapcsolt(LISTA){
+    let lekapcsoltak = 0
 
+    for (let index = 0; index < LISTA.length; index++) {
+        if (LISTA[index] == 0) {
+          lekapcsoltak += 1
+        }
+        
+      }
+      
+      if (lekapcsoltak === LISTA.length) {
+        console.log("Hurrá, meghosszabítottad a Föld életét!")
+      } 
+      
+      
+        const LEKAPCSOLTAKSZAMA = $("#szam")
+        LEKAPCSOLTAKSZAMA.html(lekapcsoltak)
+
+}
 
 
