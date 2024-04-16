@@ -1,9 +1,5 @@
 $(document).ready( function() {
-    const LISTA=listaLetrehoz()
-    $("main").html(htmlLetrehoz(LISTA))
-    leFelKapcsol(LISTA);
-    osszLekapcsolt(LISTA);
-    ujJatek()
+    
 })
 
 export function htmlLetrehoz(LISTA){
