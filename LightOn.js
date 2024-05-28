@@ -1,9 +1,20 @@
-$(document).ready( function() {
-    
-})
+export default class LightOn{
 
-export function htmlLetrehoz(LISTA){
+
+    constructor(){
+        this.#htmlLetrehoz
+        this.#listaLetrehoz
+        this.#leFelKapcsol
+        this.#osszLekapcsolt
+        this.#ujJatek
+    }
+
+
+
+#htmlLetrehoz(LISTA){
     
+    $("main").html(htmlLetrehoz(LISTA))
+
     let txt = `
     <h1>Light On játék</h1>
     <div class='gombok'>`
@@ -28,7 +39,7 @@ export function htmlLetrehoz(LISTA){
     return txt
 }
 
-export function listaLetrehoz(){
+#listaLetrehoz(){
     const LISTA = []
     
     for (let index = 0; index < 9; index++) {
@@ -42,7 +53,7 @@ export function listaLetrehoz(){
 
 
 
-export function leFelKapcsol(LISTA){
+#leFelKapcsol(LISTA){
     const ELEM = $(".gombok")
     console.log(LISTA)
     ELEM.on("click", function(event){
@@ -64,7 +75,7 @@ export function leFelKapcsol(LISTA){
 
 }
 
-export function osszLekapcsolt(LISTA){
+#osszLekapcsolt(LISTA){
     let lekapcsoltak = 0
 
     for (let index = 0; index < LISTA.length; index++) {
@@ -85,7 +96,7 @@ export function osszLekapcsolt(LISTA){
 
 }
 
-export function ujJatek(LISTA){
+#ujJatek(LISTA){
     const GOMBMEGFOG = $("button")
     GOMBMEGFOG.on("click", function(){
         const LISTA=listaLetrehoz()
@@ -96,4 +107,4 @@ export function ujJatek(LISTA){
     })
 }
 
-
+}
